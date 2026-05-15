@@ -1,4 +1,4 @@
-package br.com.github.renato28.projetpjavacleanarchitecture.infra.gateways;
+package br.com.github.renato28.projetpjavacleanarchitecture.infra.persistence;
 
 import jakarta.persistence.*;
 
