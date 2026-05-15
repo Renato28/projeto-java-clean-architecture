@@ -12,9 +12,17 @@ public class Usuario {
 
     private Endereco endereco;
 
+    public br.com.github.renato28.projetpjavacleanarchitecture.domain.Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public Usuario(String cpf, String nome, LocalDate nascimento, String email) {
-        if(cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}\"")) {
-            throw new IllegalArgumentException("Cpf no padrão incorreto.");
+        if (cpf == null || !cpf.matches("\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}")) {
+            throw new IllegalArgumentException("Cpf no padrão incorreto!");
         }
 
         this.cpf = cpf;
@@ -53,14 +61,6 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     @Override
